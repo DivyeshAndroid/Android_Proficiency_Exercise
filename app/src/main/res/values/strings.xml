@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android_Proficiency_Exercise</string>
+    <string name="network_request_error">\"Unable to Send Request.. \"</string>
+    <string name="no_data_response">No Data Found !!</string>
 </resources>
