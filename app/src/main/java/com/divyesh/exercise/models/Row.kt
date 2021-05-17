@@ -1,25 +1,36 @@
 package com.divyesh.exercise.models
 
+import androidx.room.ColumnInfo
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * [Row] :
+ * Class parse and hold json values from restful Api response value.
+ *
+ * @author Divyesh Kalotra
+ * @version 1.0.0
+ * @since 17-05-2021
+ */
+
+class Row constructor(
 
 
-
-class Row {
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("title")
     @Expose
-    var title: String? = null
+    @ColumnInfo(name = "title")
+    var title: String? = null,
 
     @SerializedName("description")
     @Expose
-    var description: String? = null
+    @ColumnInfo(name = "description")
+    var description: String? = null,
 
     @SerializedName("imageHref")
     @Expose
-    var imageHref: Any? = null
-
-
-
-}
+    @ColumnInfo(name = "imageHref")
+    var imageHref: String? = null
+)
